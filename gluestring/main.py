@@ -1,9 +1,14 @@
-from gluestring import glue_def
-input_string = 'some text before {{first_item}} & {{second_item}} and then last text {{third_item}}'
-dictionaryToMatch = {
-    "first_item" : "VALUE_1",
-    "second_item" : "VALUE_2",
-    "third_item" : "VALUE_3",
-    "default" :"NA" 
-}
-print(glue_def.glue_it(input_string,dictionaryToMatch))
+import re
+
+def glue_it(templateString, dictionaryToMatch):
+    pattern = re.compile(r'\{\{([^}$]*)\}\}')
+    number_of_patterns_found = len(pattern.findall(templateString))
+     
+    for i in range(number_of_patterns_found):
+        val = pattern.search(templateString).groups()[0]
+        if val in dictionaryToMatch:
+            templateString = templateString.replace('{{'+val+'}}',dictionaryToMatch[val])
+        else:
+            templateString = templateString.replace('{{'+val+'}}',dictionaryToMatch['default'])            
+    return templateString
+

@@ -1,2 +1,2 @@
-import gluestring
-__all__ = ["gluestring"]
+import main
+__all__ = ["main"]
