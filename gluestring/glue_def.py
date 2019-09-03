@@ -1,6 +1,7 @@
 import re
+
 def glue_it(templateString, dictionaryToMatch):
-    pattern = re.compile('\{\{([^}$]*)\}\}')
+    pattern = re.compile(r'\{\{([^}$]*)\}\}')
     number_of_patterns_found = len(pattern.findall(templateString))
      
     for i in range(number_of_patterns_found):
