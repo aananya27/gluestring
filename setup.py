@@ -10,9 +10,7 @@ setup(
     url='https://github.com/aananya27/gluestring',
     download_url='https://github.com/aananya27/gluestring/archive/v_01.tar.gz',
     keywords=['template', 'string-formatter', 'util'],
-    install_requires=[
-        're',
-    ],
+    install_requires=[],
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
