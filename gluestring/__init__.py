@@ -1,2 +1,1 @@
-import main
-__all__ = ["main"]
+from gluestring.main import glue_it
