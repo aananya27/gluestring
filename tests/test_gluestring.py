@@ -36,10 +36,10 @@ class TestUtils(unittest.TestCase):
         result_string = g1.glue_it(test_offer_string_with_unknown_keys)
 
         self.assertEqual(
-            result_string, 'Get NA off . Get NA if SUPER user.')
+            result_string, 'Get NA off . Get NA if SUPER user. ')
 
 
 if __name__ == '__main__':
     unittest.main()
 
-# python -m unittest tests.unit_tests
+# python3 -m unittest tests.test_gluestring
