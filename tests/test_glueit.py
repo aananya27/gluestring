@@ -2,7 +2,7 @@ import unittest
 from gluestring.main import glue_it
 
 
-class TestUtils(unittest.TestCase):
+class TestGlueit(unittest.TestCase):
     def test_glue_it(self):
 
         string = 'first item is- {{first_item}} & {{second_item}} and then last item is {{third_item}}'
@@ -17,7 +17,7 @@ class TestUtils(unittest.TestCase):
         self.assertEqual(
             result, 'first item is- VALUE_1 & VALUE_2 and then last item is VALUE_3')
 
-    def test_glue_it_____with_spaces_in_between(self):
+    def test_glue_it_____with_edge_spaces(self):
         string = 'GlueIt {{ space_left}} @ {{space_right }} @ {{ space_both }}'
 
         dictToMerge = {"space_left": "left",
@@ -35,4 +35,4 @@ if __name__ == '__main__':
     unittest.main()
 
 
-# python -m unittest tests.unit_tests
+# python3 -m unittest tests.test_glueit
