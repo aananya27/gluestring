@@ -8,8 +8,8 @@ def glue_it(templateString, dictionaryToMatch):
         val = pattern.search(templateString).groups()[0]
 
         if val.strip() in dictionaryToMatch:
-            templateString = templateString.replace('{{'+val+'}}',dictionaryToMatch[val.strip()])
+            templateString = templateString.replace('{{'+val+'}}',dictionaryToMatch[val.strip()], 1)
         else:
-            templateString = templateString.replace('{{'+val+'}}',dictionaryToMatch['default'])         
+            templateString = templateString.replace('{{'+val+'}}',dictionaryToMatch['default'], 1)         
     return templateString
 
