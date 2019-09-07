@@ -23,7 +23,7 @@ class Gluegun:
         if type(input_template) is list and type(self.mapping) is list:
             return resolve_mxn(input_template, self.mapping)
         elif type(input_template) is list and type(self.mapping) is dict:
-            return resolve_mxn(input_template, list(self.mapping))
+            return resolve_mxn(input_template, [self.mapping])
         elif type(input_template) is str and type(self.mapping) is list:
             return resolve_mxn([input_template], self.mapping)
         elif type(input_template) is str and type(self.mapping) is dict:

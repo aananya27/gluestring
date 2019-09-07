@@ -10,10 +10,10 @@ def resolve_string(templateString, dictionaryToMatch):
 
         if val.strip() in dictionaryToMatch:
             templateString = templateString.replace(
-                '{{'+val+'}}', dictionaryToMatch[val.strip()], 1)
+                '{{'+val+'}}', str(dictionaryToMatch[val.strip()]), 1)
         else:
             templateString = templateString.replace(
-                '{{'+val+'}}', dictionaryToMatch['default'], 1)
+                '{{'+val+'}}', str(dictionaryToMatch['default']), 1)
     return templateString
 
 # def resolve_list(templateStringList, dictionaryToMatch ):
