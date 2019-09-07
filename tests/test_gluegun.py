@@ -8,6 +8,7 @@ offer_dictionary = {
 }
 test_offer_string = "Get {{offer_thirty}} off . Get {{offer_fourty}} if SUPER user. "
 
+
 class TestGluegun(unittest.TestCase):
     def test_gluegun(self):
         g1 = Gluegun(offer_dictionary)
@@ -15,13 +16,13 @@ class TestGluegun(unittest.TestCase):
         self.assertEqual(
             result_string, 'Get 30% off . Get 40% if SUPER user. ')
 
-    def test_gluegun_with_no_parameters_should_not_throw_error(self):
+    def test_gluegun__with_no_parameters_should_not_throw_error(self):
         g1 = Gluegun()
         result_string = g1.glue_it(test_offer_string)
         self.assertEqual(
             result_string, 'Get NA off . Get NA if SUPER user. ')
 
-    def test_gluegun_with_no_default(self):
+    def test_gluegun__with_no_default(self):
         offer_dictionary_without_default = {
             "offer_thirty": "30%",
             "offer_fourty": "40%",
@@ -32,6 +33,23 @@ class TestGluegun(unittest.TestCase):
 
         self.assertEqual(
             result_string, 'Get NA off . Get NA if SUPER user. ')
+
+    def test_gluegun__with_list_of_dictionary(self):
+        dictionary_list = [
+            {
+                "A": "a",
+                "B": "b"
+            },
+            {
+                "AB": "ab",
+                "CD": "cd"
+            }
+        ]
+        sut = Gluegun(dictionary_list)
+
+        for mapie in sut.mapping:
+            self.assertTrue(
+                "default" in mapie)
 
 
 if __name__ == '__main__':
