@@ -7,7 +7,6 @@ DEFAULT_DICTIONARY = {
 
 class Gluegun:
     def __init__(self, mapping=DEFAULT_DICTIONARY):
-        print(type(mapping) is dict)
         if (type(mapping) is dict):
             self.mapping = {**DEFAULT_DICTIONARY, **mapping}
         elif (type(mapping) is list):

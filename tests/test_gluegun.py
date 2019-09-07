@@ -51,6 +51,10 @@ class TestGluegun(unittest.TestCase):
             self.assertTrue(
                 "default" in mapie)
 
+    def test_gluegun__with_invalid_type(self):
+        with self.assertRaises(Exception):
+            Gluegun(27)
+
 
 if __name__ == '__main__':
     unittest.main()
