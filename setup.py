@@ -2,13 +2,13 @@ from distutils.core import setup
 setup(
     name='gluestring',
     packages=['gluestring'],
-    version='0.5',
+    version='0.6',
     license='MIT',
     description='Easy way to create template strings',
     author='Aananya',
     author_email='astream.h@outlook.com',
     url='https://github.com/aananya27/gluestring',
-    download_url='https://github.com/aananya27/gluestring/archive/v_05.tar.gz',
+    download_url='https://github.com/aananya27/gluestring/archive/v_06.tar.gz',
     keywords=['template', 'string-formatter', 'util'],
     install_requires=[],
     classifiers=[
