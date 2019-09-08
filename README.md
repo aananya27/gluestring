@@ -14,9 +14,9 @@ Checkout the [Recipes](#recipes) to see how gluestring package in actions
 1.   [Install](#install)
 2.   [Usage](#usage)
 3.   [Recipes](#recipes)
-        - [List of input strings with single dictionary](####list-of-input-strings-with-single-dictionary)
-        - [Single input string with list of dictionary](####single-input-string-with-list-of-dictionary)
-        - [List of input strings with list of dictionary](####list-of-input-strings-with-list-of-dictionary)
+        - [List of input strings with single dictionary](#list-of-input-strings-with-single-dictionary)
+        - [Single input string with list of dictionary](#single-input-string-with-list-of-dictionary)
+        - [List of input strings with list of dictionary](#list-of-input-strings-with-list-of-dictionary)
 
 
 
