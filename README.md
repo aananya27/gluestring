@@ -1,6 +1,8 @@
 # GlueString
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-red.svg)
+[![Language: python](https://img.shields.io/badge/python-3-blue.svg)](https://www.python.org/)&nbsp;
+
 
 ## About
 
