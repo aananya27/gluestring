@@ -1,5 +1,7 @@
 # GlueString
 
+![License: MIT](https://img.shields.io/badge/License-MIT-red.svg)
+
 ## About
 
 Glustring allows you to work with string templates flawlessly. 
